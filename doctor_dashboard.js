@@ -56,15 +56,20 @@ function scheduleAppointment() {
     }
 }
 
-// **4️⃣ Chat with Caretaker Feature**
+// 🔥 Ensure chat section appears in Doctor Dashboard
 function chatWithCaretaker() {
-    dashboardContent.innerHTML = `<h2>💬 Chat with Caretaker</h2>
+    dashboardContent.innerHTML = `
+        <h2>💬 Chat with Caretaker</h2>
         <div class="chat-container">
             <div id="chat-box"></div>
             <input type="text" id="chat-input" placeholder="Type a message...">
             <button onclick="sendMessage()">Send</button>
-        </div>`;
+        </div>
+    `;
+
+    loadMessages(); // Load messages when chat is opened
 }
+
 // Load Patient Reports
 function viewPatientReports() {
     dashboardContent.innerHTML = `<h2>📑 Patient Medical Reports</h2><div id="reports-list"></div>`;

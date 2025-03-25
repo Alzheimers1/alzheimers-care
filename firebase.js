@@ -65,3 +65,10 @@ function logoutUser() {
         window.location.href = "index.html"; // Redirect after logout
     });
 }
+function loadMessages() {
+    db.ref("messages").on("child_added", snapshot => {
+        const msg = snapshot.val();
+        chatBox.innerHTML += `<p><strong>${msg.role}:</strong> ${msg.text}</p>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+    });
+}
