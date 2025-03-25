@@ -11,31 +11,36 @@
     <div class="background"></div>
     <div class="login-container">
         <h2>Welcome to <span class="highlight">Alzheimer’s Care System</span></h2>
-        <p>Select Your Role or Use Auto-Detection</p>
+        <p>Select Your Role to Continue</p>
 
+        <!-- Role Selection -->
         <div class="role-selection">
-            <div class="role-card patient" id="patient-card">
+            <div class="role-card" id="patient-card">
                 <img src="patient.png" alt="Patient">
                 <p>Patient</p>
             </div>
-            <div class="role-card caretaker" id="caretaker-card">
+            <div class="role-card" id="caretaker-card">
                 <img src="caretaker.png" alt="Caretaker">
                 <p>Caretaker</p>
             </div>
-            <div class="role-card doctor" id="doctor-card">
+            <div class="role-card" id="doctor-card">
                 <img src="doctor.png" alt="Doctor">
                 <p>Doctor</p>
             </div>
         </div>
 
-        <button class="auto-detect" onclick="detectRole()">🔍 Auto-Detect Role</button>
-        <p>Or</p>
-        <button class="show-login" onclick="showLogin()">🔑 Use Traditional Login</button>
-
-        <div id="login-form" class="hidden">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="login()">Login</button>
+        <!-- Innovative Login Form (Hidden by Default) -->
+        <div id="login-form" class="hidden login-popup">
+            <h3 id="login-title">Login</h3>
+            <div class="input-group">
+                <span class="icon">📧</span>
+                <input type="email" id="email" placeholder="Enter Email">
+            </div>
+            <div class="input-group">
+                <span class="icon">🔒</span>
+                <input type="password" id="password" placeholder="Enter Password">
+            </div>
+            <button class="login-btn" onclick="loginUser()">Login</button>
         </div>
     </div>
 

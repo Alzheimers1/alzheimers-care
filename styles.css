@@ -6,7 +6,7 @@ body {
     overflow: hidden;
 }
 
-/* Gradient Background with Animated Pattern */
+/* 🌈 Gradient Background with Animation */
 .background {
     position: absolute;
     width: 100%;
@@ -23,7 +23,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Glassmorphism Login Container */
+/* 🌟 Glassmorphism Login Container */
 .login-container {
     position: absolute;
     top: 50%;
@@ -37,7 +37,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Gradient Text Effect */
+/* 🎨 Gradient Text Effects */
 h2 {
     font-size: 24px;
     font-weight: 600;
@@ -54,7 +54,7 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-/* Role Selection */
+/* 👤 Role Selection */
 .role-selection {
     display: flex;
     justify-content: space-between;
@@ -89,7 +89,73 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-/* Buttons */
+/* 🔐 Modern Login Form */
+.login-popup {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.4s ease-in-out;
+}
+
+/* 📌 Input Field with Icons */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* ✨ Stylish Input Fields */
+input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: rgb(22, 3, 3);
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+/* 🚀 Animated Login Button */
+.login-btn {
+    background: linear-gradient(90deg, #ff758c, #f05193);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.login-btn:hover {
+    background: linear-gradient(90deg, #994ec1, #c63ead);
+    transform: scale(1.05);
+}
+
+/* 🎬 Slide Up Animation for Login Form */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔥 Button Styling */
 button {
     background: #8f320b;
     border: none;
@@ -99,6 +165,7 @@ button {
     cursor: pointer;
     margin-top: 10px;
     transition: 0.3s;
+    color: white;
 }
 
 button:hover {
@@ -106,29 +173,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Login Form */
+/* 🛑 Hide Elements */
 .hidden {
     display: none;
-}
-
-#login-form {
-    margin-top: 15px;
-}
-
-input {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-}
-
-.show-login {
-    background: #2b892f;
-    color: white;
-}
-
-.auto-detect {
-    background: #3e8199;
-    color: white;
 }

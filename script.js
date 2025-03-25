@@ -73,3 +73,48 @@ function logoutUser() {
         window.location.href = "index.html";
     });
 }
+let selectedRole = "";
+
+// Show login form when a role is selected
+document.getElementById("patient-card").onclick = function() {
+    showLoginForm("Patient");
+};
+
+document.getElementById("caretaker-card").onclick = function() {
+    showLoginForm("Caretaker");
+};
+
+document.getElementById("doctor-card").onclick = function() {
+    showLoginForm("Doctor");
+};
+
+function showLoginForm(role) {
+    selectedRole = role;
+    document.getElementById("login-title").innerText = `Login as ${role}`;
+    document.getElementById("login-form").classList.remove("hidden");
+}
+
+// Login function with redirection
+function loginUser() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(userCredential => {
+            console.log("✅ Login Successful!");
+            redirectToDashboard(selectedRole);
+        })
+        .catch(error => {
+            alert("❌ Login Failed: " + error.message);
+        });
+}
+
+function redirectToDashboard(role) {
+    if (role === "Caretaker") {
+        window.location.href = "caretaker_dashboard.html";
+    } else if (role === "Doctor") {
+        window.location.href = "doctor_dashboard.html";
+    } else {
+        window.location.href = "patient_dashboard.html";
+    }
+}
