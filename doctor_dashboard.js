@@ -56,7 +56,6 @@ function scheduleAppointment() {
     }
 }
 
-// 🔥 Ensure chat section appears in Doctor Dashboard
 function chatWithCaretaker() {
     dashboardContent.innerHTML = `
         <h2>💬 Chat with Caretaker</h2>
@@ -67,7 +66,7 @@ function chatWithCaretaker() {
         </div>
     `;
 
-    loadMessages(); // Load messages when chat is opened
+    loadMessages(); // Ensure messages load when chat opens
 }
 
 // Load Patient Reports
