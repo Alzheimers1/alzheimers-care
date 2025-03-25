@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="dashboards.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+    <script src="firebase.js"></script>
+
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Patient Dashboard</h2>
+        <ul>
+            <li><a href="#" id="memory-album">📸 Memory Album</a></li>
+            <li><a href="#" id="music-therapy">🎵 Music Therapy</a></li>
+            <li><a href="#" id="routine-guide">📅 Daily Routine</a></li>
+            <li><a href="#" id="sos">🔴 Emergency SOS</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Welcome, Patient!</h1>
+        <p>Select an option from the sidebar.</p>
+        <div id="dashboard-content"></div>
+    </div>
+    <div class="chat-container">
+        <h2>💬 Chat</h2>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    
+    <script src="patient_dashboard.js"></script>
+</body>
+</html>

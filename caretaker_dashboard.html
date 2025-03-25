@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caretaker Dashboard</title>
+    <link rel="stylesheet" href="dashboards.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+<script src="firebase.js"></script>
+
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Caretaker Dashboard</h2>
+        <ul>
+            <li><a href="#" id="upload-content">📤 Upload Patient Content</a></li>
+            <li><a href="#" id="medication-reminders">💊 Set Medication Reminders</a></li>
+            <li><a href="#" id="track-location">📍 Track Patient Location</a></li>
+            <li><a href="#" id="chat-doctor">💬 Chat with Doctor</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Welcome, Caretaker!</h1>
+        <p>Select an option from the sidebar.</p>
+        <div id="dashboard-content"></div>
+    </div>
+    <div class="chat-container">
+        <h2>💬 Chat</h2>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    
+    <script src="caretaker_dashboard.js"></script>
+</body>
+</html>

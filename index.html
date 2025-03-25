@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Alzheimer’s Care System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="login-container">
+        <h2>Welcome to <span class="highlight">Alzheimer’s Care System</span></h2>
+        <p>Select Your Role or Use Auto-Detection</p>
+
+        <div class="role-selection">
+            <div class="role-card patient" id="patient-card">
+                <img src="patient.png" alt="Patient">
+                <p>Patient</p>
+            </div>
+            <div class="role-card caretaker" id="caretaker-card">
+                <img src="caretaker.png" alt="Caretaker">
+                <p>Caretaker</p>
+            </div>
+            <div class="role-card doctor" id="doctor-card">
+                <img src="doctor.png" alt="Doctor">
+                <p>Doctor</p>
+            </div>
+        </div>
+
+        <button class="auto-detect" onclick="detectRole()">🔍 Auto-Detect Role</button>
+        <p>Or</p>
+        <button class="show-login" onclick="showLogin()">🔑 Use Traditional Login</button>
+
+        <div id="login-form" class="hidden">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
